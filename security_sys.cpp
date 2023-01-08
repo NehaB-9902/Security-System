@@ -5,6 +5,7 @@
 using namespace std;
 
 
+
 int main(){
     int a, i=0;
     string text, old, password0, password1, pass, name, password2, age, user, word, word1, email;
@@ -16,12 +17,15 @@ int main(){
     cout<<"|      3.  Change Password     |"<<endl;
     cout<<"|______4.  End Program_________|"<<endl;
     do{
+        
         cout<<endl<<endl;
         cout<<"Enter your choice :-";
         cin>>a;
         switch(a)
         {
+                
             case 1:{
+                
                     cout<<"________________________________"<<endl<<endl;
                     cout<<"----------Register--------------"<<endl;
                     cout<<"________________________________"<<endl<<endl;
@@ -33,13 +37,16 @@ int main(){
                     cin>>email;
                     cout<<"Enter you age:-";
                     cin>>age;
+                
                     ofstream of1;
                     of1.open("file.txt");
+                
                     if(of1.is_open()){
                         of1<<name<<"\n";
                         of1<<password0;
                         cout<<"Registration Successfull"<<endl;
                     }
+                
                 break;    
             }
 
@@ -83,6 +90,7 @@ int main(){
                             }
                         }
                     }
+                
                 break;
             }
 
@@ -119,6 +127,7 @@ int main(){
                                     cout<<"Password changed successfully";
                                 }
                                 else{
+                                    
                                     of1<<cp[0]<<"\n";
                                     of1<<old;
                                     cout<<"Password do not match"<<endl;
@@ -126,6 +135,7 @@ int main(){
                             }
                         }
                         else{
+                            
                             cout<<"Please enter a valid password"<<endl;
                             break;
                         }
@@ -134,11 +144,13 @@ int main(){
 
                 break;
             }
+                
 
             case 4:{
                 cout<<"__________Thank you__________";
                 break;
             }
+                
 
             default:{
                 cout<<"Enter a valid choice";
@@ -147,6 +159,7 @@ int main(){
 
     }
     while(a != 4);
+    
     return 0;
 }
 
